@@ -1,0 +1,531 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<reportes>
+    <reporte id="bitacora" modelo="Bitacora_model">
+        <columnas>
+            <columna contenido="@dtFecha" etiqueta="bitacora_fecha" ordenable="Si" agrupable="No" formato="fecha" ancho ="15"></columna>
+            <columna contenido="@cNombreUsuario" etiqueta="bitacora_usuario" ordenable="Si" agrupable="No" formato="texto" ancho="20"></columna>
+            <columna contenido="@cModulo" etiqueta="bitacora_modulo" ordenable="Si" agrupable="No" formato="texto" ancho ="15"></columna>		
+            <columna contenido="@cAccion" etiqueta="bitacora_accion" ordenable="Si" agrupable="No" formato="texto" ancho ="15"></columna>
+            <columna contenido="@cDescripcion" etiqueta="bitacora_descripcion_bitacora" ordenable="Si" agrupable="No" formato="texto" ancho ="35"></columna>
+        </columnas>
+    </reporte>
+    
+    <reporte id="modulos" modelo="Modulo_model">
+        <columnas>
+            <columna contenido="@cNombre" etiqueta="modulos_nombre" ordenable="Si" agrupable="No" formato="fecha" ancho ="15"></columna>
+            <columna contenido="@cAlias" etiqueta="modulos_alias" ordenable="Si" agrupable="No" formato="texto" ancho="20"></columna>
+            <columna contenido="@cDescripcion" etiqueta="modulos_descripcion_modulo" ordenable="Si" agrupable="No" formato="texto" ancho ="15"></columna>		
+        </columnas>
+    </reporte>
+    
+    <reporte id="acciones" modelo="Accion_model">
+        <columnas>
+            <columna contenido="@cNombre" etiqueta="acciones_nombre" ordenable="Si" agrupable="No" formato="fecha" ancho ="15"></columna>
+            <columna contenido="@cAlias" etiqueta="acciones_alias" ordenable="Si" agrupable="No" formato="texto" ancho="20"></columna>
+            <columna contenido="@cDescripcion" etiqueta="acciones_descripcion" ordenable="Si" agrupable="No" formato="texto" ancho ="15"></columna>		
+        </columnas>
+    </reporte>
+    
+    <reporte id="roles" modelo="Rol_model">
+        <columnas>
+            <columna contenido="@cNombre" etiqueta="roles_nombre" ordenable="Si" agrupable="No" formato="fecha" ancho ="15"></columna>
+            <columna contenido="@cDescripcion" etiqueta="roles_descripcion_roles" ordenable="Si" agrupable="No" formato="texto" ancho ="15"></columna>		
+        </columnas>
+    </reporte>
+    
+    <reporte id="usuarios" modelo="Usuario_model">
+        <columnas>
+            <columna contenido="@cNombre" etiqueta="usuario_nombre" ordenable="Si" agrupable="No" formato="fecha" ancho ="15"></columna>
+            <columna contenido="@cApellidoPaterno" etiqueta="usuario_apellido_paterno" ordenable="Si" agrupable="No" formato="fecha" ancho ="15"></columna>
+            <columna contenido="@cApellidoMaterno" etiqueta="usuario_apellido_materno" ordenable="Si" agrupable="No" formato="fecha" ancho ="15"></columna>
+            <columna contenido="@cCorreo" etiqueta="usuario_correo" ordenable="Si" agrupable="No" formato="texto" ancho ="15"></columna>		
+            <columna contenido="@cNombreRol" etiqueta="usuario_rol" ordenable="Si" agrupable="No" formato="texto" ancho ="15"></columna>		
+        </columnas>
+    </reporte>
+    
+    <reporte id="idiomas" modelo="Idioma_model">
+        <columnas>
+            <columna contenido="@cNombre" etiqueta="idiomas_nombre" ordenable="Si" agrupable="No" formato="fecha" ancho ="15"></columna>
+            <columna contenido="@cAlias" etiqueta="idiomas_alias" ordenable="Si" agrupable="No" formato="fecha" ancho ="15"></columna>
+            <columna contenido="@cNombreArchivo" etiqueta="idiomas_archivo" ordenable="Si" agrupable="No" formato="fecha" ancho ="15"></columna>		
+        </columnas>
+    </reporte>
+    
+    <reporte id="email" modelo="Email_model">
+        <columnas>
+            <columna contenido="@cTitulo" etiqueta="email_titulo_email" ordenable="Si" agrupable="No" formato="fecha" ancho ="15"></columna>
+            <columna contenido="@cDescripcion" etiqueta="email_descripcion_email" ordenable="Si" agrupable="No" formato="fecha" ancho ="15"></columna>
+            <columna contenido="@cAlias" etiqueta="email_idioma" ordenable="Si" agrupable="No" formato="fecha" ancho ="15"></columna>		
+        </columnas>
+    </reporte>
+    
+    <reporte id="menu" modelo="Menu_model">
+        <columnas>
+            <columna contenido="@cNombre" etiqueta="Menu_nombre" ordenable="Si" agrupable="No" formato="fecha" ancho ="15"></columna>
+            <columna contenido="@cDescripcion" etiqueta="Menu_descripcion_menu" ordenable="Si" agrupable="No" formato="fecha" ancho ="15"></columna>	
+        </columnas>
+    </reporte>
+    
+    <reporte id="empresas" modelo="Empresa_model">
+        <columnas>
+            <columna contenido="@cCodigo" etiqueta="empresas_codigo" ordenable="Si" agrupable="No"  ancho ="15"></columna>
+            <columna contenido="@cNombre" etiqueta="empresas_nombre" ordenable="Si" agrupable="No" ancho ="15"></columna>	
+            <columna contenido="@cRazonSocial" etiqueta="empresas_razon_social" ordenable="Si" agrupable="No" ancho ="15"></columna>	
+            <columna contenido="@cRFC" etiqueta="empresas_rfc" ordenable="Si" agrupable="No" ancho ="15"></columna>	
+            <columna contenido="@idConfiguracionTimbrado" etiqueta="empresas_numero_timbrado_listado" ordenable="Si" agrupable="No" ancho ="15"></columna>	
+        </columnas>
+    </reporte>
+    
+    <reporte id="seriesfiscales" modelo="SerieFiscal_model">
+        <columnas>
+            <columna contenido="@cCodigo" etiqueta="seriesfiscales_codigo" ordenable="Si" agrupable="No"  ancho ="15"></columna>
+            <columna contenido="@cSerie" etiqueta="seriesfiscales_serie" ordenable="Si" agrupable="No" ancho ="15"></columna>	
+            <columna contenido="@txDescripcion" etiqueta="seriesfiscales_descripcion_input" ordenable="Si" agrupable="No" ancho ="15"></columna>	
+        </columnas>
+    </reporte>
+    
+     <reporte id="foliosfiscales" modelo="FolioFiscal_model">
+        <columnas>
+            <columna contenido="@iNumeroInicial" etiqueta="foliosfiscales_numero_inicial" ordenable="Si" agrupable="No"  ancho ="15"></columna>
+            <columna contenido="@iNumeroFinal" etiqueta="foliosfiscales_numero_final" ordenable="Si" agrupable="No" ancho ="15"></columna>	
+            <columna contenido="@iNumeroUltimo" etiqueta="foliosfiscales_numero_ultimo" ordenable="Si" agrupable="No" ancho ="15"></columna>	
+            <columna contenido="@cNumeroAprobacion" etiqueta="foliosfiscales_numero_aprobacion" ordenable="Si" agrupable="No" ancho ="15"></columna>	
+        </columnas>
+    </reporte>
+    
+    <reporte id="registrospatronales" modelo="RegistroPatronal_model">
+        <columnas>
+            <columna contenido="@cCodigo" etiqueta="registrospatronales_codigo" ordenable="Si" agrupable="No"  ancho ="15"></columna>
+            <columna contenido="@cNombre" etiqueta="registrospatronales_nombre" ordenable="Si" agrupable="No" ancho ="15"></columna>	
+            <columna contenido="@cNombreEmpresa" etiqueta="registrospatronales_empresa" ordenable="Si" agrupable="No" ancho ="15"></columna>	
+            <columna contenido="@cNumeroRegistro" etiqueta="registrospatronales_numero_registro_listado" ordenable="Si" agrupable="No" ancho ="15"></columna>	
+            <columna contenido="@cNombreModulo" etiqueta="registrospatronales_modulo" ordenable="Si" agrupable="No" ancho ="15"></columna>	
+        </columnas>
+    </reporte>
+    
+    <reporte id="primasriesgo" modelo="PrimaRiesgo_model">
+        <columnas>
+            <columna contenido="@dtFechaInicial" etiqueta="primasriesgo_fecha_inicial" ordenable="Si" agrupable="No"  ancho ="15"></columna>
+            <columna contenido="@fPrimaRiesgo" etiqueta="primasriesgo_prima_riesgo" ordenable="Si" agrupable="No" ancho ="15"></columna>	
+        </columnas>
+    </reporte>
+    
+    <reporte id="departamentos" modelo="Departamento_model">
+        <columnas>
+            <columna contenido="@cCodigo" etiqueta="departamentos_codigo" ordenable="Si" agrupable="No"  ancho ="15"></columna>
+            <columna contenido="@cNombre" etiqueta="departamentos_nombre" ordenable="Si" agrupable="No" ancho ="15"></columna>	
+        </columnas>
+    </reporte>
+    
+    <reporte id="areas" modelo="Area_model">
+        <columnas>
+            <columna contenido="@cCodigo" etiqueta="areas_codigo" ordenable="Si" agrupable="No"  ancho ="15"></columna>
+            <columna contenido="@cNombre" etiqueta="areas_nombre" ordenable="Si" agrupable="No" ancho ="15"></columna>	
+        </columnas>
+    </reporte>
+    
+    <reporte id="puestos" modelo="Puesto_model">
+        <columnas>
+            <columna contenido="@cCodigo" etiqueta="puestos_codigo" ordenable="Si" agrupable="No"  ancho ="15"></columna>
+            <columna contenido="@cNombre" etiqueta="puestos_nombre" ordenable="Si" agrupable="No" ancho ="15"></columna>	
+        </columnas>
+    </reporte>
+    
+    <reporte id="contratos" modelo="Contrato_model">
+        <columnas>
+            <columna contenido="@cCodigo" etiqueta="contratos_codigo" ordenable="Si" agrupable="No"  ancho ="15"></columna>
+            <columna contenido="@cNombre" etiqueta="contratos_nombre" ordenable="Si" agrupable="No" ancho ="15"></columna>	
+        </columnas>
+    </reporte>
+    
+    <reporte id="tiposnomina" modelo="TipoNomina_model">
+        <columnas>
+            <columna contenido="@cCodigo" etiqueta="tiposnomina_codigo" ordenable="Si" agrupable="No"  ancho ="15"></columna>
+            <columna contenido="@cNombre" etiqueta="tiposnomina_nombre" ordenable="Si" agrupable="No" ancho ="15"></columna>	
+            <columna contenido="@cNombreCorto" etiqueta="tiposnomina_nombre_corto" ordenable="Si" agrupable="No" ancho ="15"></columna>	
+            <columna contenido="@cNombreFrecuencia" etiqueta="tiposnomina_frecuencia" ordenable="Si" agrupable="No" ancho ="15"></columna>	
+            <columna contenido="@fDiasFondo" etiqueta="tiposnomina_dias_fondo" ordenable="Si" agrupable="No" ancho ="15"></columna>	
+        </columnas>
+    </reporte>
+    
+    <reporte id="tablaprestaciones" modelo="TablaPrestacion_model">
+        <columnas>
+            <columna contenido="@cCodigo" etiqueta="tablaprestaciones_codigo" ordenable="Si" agrupable="No"  ancho ="15"></columna>
+            <columna contenido="@cNombre" etiqueta="tablaprestaciones_nombre" ordenable="Si" agrupable="No" ancho ="15"></columna>	
+        </columnas>
+    </reporte>
+    
+    <reporte id="prestacionesley" modelo="PrestacionLey_model">
+        <columnas>
+            <columna contenido="@fAno" etiqueta="prestacionesley_ano" ordenable="Si" agrupable="No"  ancho ="15"></columna>
+            <columna contenido="@fAnoFinal" etiqueta="prestacionesley_ano_final" ordenable="Si" agrupable="No" ancho ="15"></columna>	
+            <columna contenido="@iVacaciones" etiqueta="prestacionesley_vacaciones" ordenable="Si" agrupable="No" ancho ="15"></columna>	
+            <columna contenido="@fPrimaVacacional" etiqueta="prestacionesley_prima" ordenable="Si" agrupable="No" ancho ="15"></columna>	
+            <columna contenido="@iDiasAguinaldo" etiqueta="prestacionesley_aguinaldo" ordenable="Si" agrupable="No" ancho ="15"></columna>	
+            <columna contenido="@iDiasAdicionales" etiqueta="prestacionesley_adicionales" ordenable="Si" agrupable="No" ancho ="15"></columna>	
+            <columna contenido="@fFactorIntegracion" etiqueta="prestacionesley_factor" ordenable="Si" agrupable="No" ancho ="15"></columna>	
+        </columnas>
+    </reporte>
+    
+    <reporte id="nivelesorganigrama" modelo="NivelOrganigrama_model">
+        <columnas>
+            <columna contenido="@iOrden" etiqueta="nivelesorganigrama_orden" ordenable="Si" agrupable="No"  ancho ="15"></columna>
+            <columna contenido="@cNombre" etiqueta="nivelesorganigrama_nombre" ordenable="Si" agrupable="No" ancho ="15"></columna>	
+            <columna contenido="@cNombreSingular" etiqueta="nivelesorganigrama_nombre_singular" ordenable="Si" agrupable="No" ancho ="15"></columna>	
+        </columnas>
+    </reporte>
+    
+    <reporte id="prestaciones" modelo="Prestacion_model">
+        <columnas>
+            <columna contenido="@cCodigo" etiqueta="prestaciones_codigo" ordenable="Si" agrupable="No"  ancho ="15"></columna>
+            <columna contenido="@cNombre" etiqueta="prestaciones_nombre" ordenable="Si" agrupable="No" ancho ="15"></columna>	
+            <columna contenido="@cNombreFrecuencia" etiqueta="prestaciones_frecuencia" ordenable="Si" agrupable="No" ancho ="15"></columna>	
+            <columna contenido="@cNombreCalculo" etiqueta="prestaciones_calculo" ordenable="Si" agrupable="No" ancho ="15"></columna>	
+            <columna contenido="@fMonto" etiqueta="prestaciones_monto" ordenable="Si" agrupable="No" ancho ="15"></columna>	
+            <columna contenido="@fTope" etiqueta="prestaciones_tope" ordenable="Si" agrupable="No" ancho ="15"></columna>	
+            <columna contenido="@cNombreISR" etiqueta="prestaciones_isr" ordenable="Si" agrupable="No" ancho ="15"></columna>	
+            <columna contenido="@cNombreIMSS" etiqueta="prestaciones_imss" ordenable="Si" agrupable="No" ancho ="15"></columna>	
+        </columnas>
+    </reporte>
+    
+    <reporte id="paquetesprestaciones" modelo="PaquetePrestacion_model">
+        <columnas>
+            <columna contenido="@cCodigo" etiqueta="paquetesprestaciones_codigo" ordenable="Si" agrupable="No"  ancho ="15"></columna>
+            <columna contenido="@cNombre" etiqueta="paquetesprestaciones_nombre" ordenable="Si" agrupable="No" ancho ="15"></columna>	
+        </columnas>
+    </reporte>
+    
+    <reporte id="asociarprestaciones" modelo="Asociarprestacion_model">
+        <columnas>
+            <columna contenido="@iOrden" etiqueta="asociarprestaciones_orden" ordenable="Si" agrupable="No"  ancho ="15"></columna>
+            <columna contenido="@cNombrePrestacion" etiqueta="asociarprestaciones_prestacion" ordenable="Si" agrupable="No" ancho ="15"></columna>	
+            <columna contenido="@fMonto" etiqueta="asociarprestaciones_monto" ordenable="Si" agrupable="No" ancho ="15"></columna>	
+        </columnas>
+    </reporte>
+    
+    <reporte id="motivoskardex" modelo="MotivoKardex_model">
+        <columnas>
+            <columna contenido="@cCodigo" etiqueta="motivoskardex_codigo" ordenable="Si" agrupable="No"  ancho ="15"></columna>
+            <columna contenido="@cNombre" etiqueta="motivoskardex_nombre" ordenable="Si" agrupable="No" ancho ="15"></columna>	
+            <columna contenido="@cTipoMotivoKardex" etiqueta="motivoskardex_tipo" ordenable="Si" agrupable="No" ancho ="15"></columna>	
+            <columna contenido="@cMotivoBajaIMSS" etiqueta="motivoskardex_motivo_baja_imss" ordenable="Si" agrupable="No" ancho ="15"></columna>	
+        </columnas>
+    </reporte>
+    
+    <reporte id="tablasnumericas" modelo="TablaNumerica_model">
+        <columnas>
+            <columna contenido="@cNombre" etiqueta="motivoskardex_nombre" ordenable="Si" agrupable="No" ancho ="15"></columna>	
+        </columnas>
+    </reporte>
+    
+    <reporte id="tablasisr" modelo="TablaISR_model">
+        <columnas>
+            <columna contenido="@fLimiteInferior" etiqueta="tablasisr_limite_inferior" ordenable="Si" agrupable="No" ancho ="15"></columna>	
+            <columna contenido="@fLimiteSuperior" etiqueta="tablasisr_limite_superior" ordenable="Si" agrupable="No" ancho ="15"></columna>	
+            <columna contenido="@fCuota" etiqueta="tablasisr_cuota" ordenable="Si" agrupable="No" ancho ="15"></columna>	
+            <columna contenido="@fTaza" etiqueta="tablasisr_taza" ordenable="Si" agrupable="No" ancho ="15"></columna>	
+        </columnas>
+    </reporte>
+    
+    <reporte id="salariosminimos" modelo="SalarioMinimo_model">
+        <columnas>
+            <columna contenido="@dtFechaInicial" etiqueta="salariosminimos_fecha_inicial" ordenable="Si" agrupable="No" ancho ="15"></columna>	
+            <columna contenido="@dtFechaFinal" etiqueta="salariosminimos_fecha_final" ordenable="Si" agrupable="No" ancho ="15"></columna>	
+            <columna contenido="@fMonto" etiqueta="salariosminimos_monto" ordenable="Si" agrupable="No" ancho ="15"></columna>	
+        </columnas>
+    </reporte>
+    
+    <reporte id="tiposmoneda" modelo="TipoMoneda_model">
+        <columnas>
+            <columna contenido="@cCodigo" etiqueta="tiposmoneda_codigo" ordenable="Si" agrupable="No"  ancho ="15"></columna>
+            <columna contenido="@cNombre" etiqueta="tiposmoneda_nombre" ordenable="Si" agrupable="No" ancho ="15"></columna>	
+        </columnas>
+    </reporte>
+    
+    <reporte id="conceptos" modelo="Concepto_model">
+        <columnas>
+            <columna contenido="@iNumero" etiqueta="conceptos_numero" ordenable="Si" agrupable="No"  ancho ="15"></columna>
+            <columna contenido="@cNombre" etiqueta="tiposmoneda_nombre" ordenable="Si" agrupable="No" ancho ="15"></columna>	
+            <columna contenido="@cNombreTipoConcepto" etiqueta="conceptos_tipo" ordenable="Si" agrupable="No" ancho ="15"></columna>	
+            <columna contenido="@bMostrarRecibo" etiqueta="conceptos_recibo_grid" ordenable="Si" agrupable="No" ancho ="15"></columna>	
+            <columna contenido="@cNombreColumnaRecibo" etiqueta="conceptos_columna_grid" ordenable="Si" agrupable="No" ancho ="15"></columna>	
+            <columna contenido="@cNombreMostrarListado" etiqueta="conceptos_mostrar_listado_grid" ordenable="Si" agrupable="No" ancho ="15"></columna>	
+            <columna contenido="@bPTU" etiqueta="conceptos_ptu_grid" ordenable="Si" agrupable="No" ancho ="15"></columna>	
+        </columnas>
+    </reporte>
+    
+    <reporte id="clientes" modelo="Cliente_model">
+        <columnas>
+            <columna contenido="@cCodigo" etiqueta="clientes_codigo" ordenable="Si" agrupable="No"  ancho ="15"></columna>
+            <columna contenido="@cNombre" etiqueta="clientes_nombre" ordenable="Si" agrupable="No" ancho ="15"></columna>	
+        </columnas>
+    </reporte>
+    
+    <reporte id="representantes" modelo="Representante_model">
+        <columnas>
+            <columna contenido="@cNombreCliente" etiqueta="representantes_cliente" ordenable="Si" agrupable="No"  ancho ="15"></columna>
+            <columna contenido="@cNombreUsuario" etiqueta="representantes_usuario" ordenable="Si" agrupable="No" ancho ="15"></columna>	
+        </columnas>
+    </reporte>
+    
+    <reporte id="horarios" modelo="Horario_model">
+        <columnas>
+            <columna contenido="@cCodigo" etiqueta="horarios_codigo" ordenable="Si" agrupable="No"  ancho ="15"></columna>
+            <columna contenido="@cNombre" etiqueta="horarios_nombre" ordenable="Si" agrupable="No" ancho ="15"></columna>	
+            <columna contenido="@tEntrada" etiqueta="horarios_entrada" ordenable="Si" agrupable="No"  ancho ="15"></columna>
+            <columna contenido="@tSalida" etiqueta="horarios_salida" ordenable="Si" agrupable="No" ancho ="15"></columna>	
+            <columna contenido="@iJornada" etiqueta="horarios_jornada" ordenable="Si" agrupable="No" ancho ="15"></columna>	
+            <columna contenido="@cTipoHorario" etiqueta="horarios_tipo" ordenable="Si" agrupable="No" ancho ="15"></columna>	
+        </columnas>
+    </reporte>
+    
+    <reporte id="turnos" modelo="Turno_model">
+        <columnas>
+            <columna contenido="@cCodigo" etiqueta="turnos_codigo" ordenable="Si" agrupable="No"  ancho ="15"></columna>
+            <columna contenido="@cNombre" etiqueta="turnos_nombre" ordenable="Si" agrupable="No" ancho ="15"></columna>
+            <columna contenido="@cTipoJornada" etiqueta="turnos_tipo_jornada" ordenable="Si" agrupable="No" ancho ="15"></columna>	
+            <columna contenido="@bPagoVacaciones" etiqueta="turnos_ritmo" ordenable="Si" agrupable="No" ancho ="15"></columna>	
+        </columnas>
+    </reporte>
+    
+    <reporte id="ritmoturno" modelo="RitmoTurno_model">
+        <columnas>
+            <columna contenido="@iOrden" etiqueta="ritmoturno_orden" ordenable="Si" agrupable="No"  ancho ="15"></columna>
+            <columna contenido="@cTipoRitmoTurno" etiqueta="ritmoturno_tipo" ordenable="Si" agrupable="No" ancho ="15"></columna>
+            <columna contenido="@iDias" etiqueta="ritmoturno_dias" ordenable="Si" agrupable="No" ancho ="15"></columna>	
+            <columna contenido="@cHorario" etiqueta="ritmoturno_horario" ordenable="Si" agrupable="No" ancho ="15"></columna>	
+            <columna contenido="@tEntrada" etiqueta="ritmoturno_entrada" ordenable="Si" agrupable="No" ancho ="15"></columna>	
+            <columna contenido="@tSalida" etiqueta="ritmoturno_salida" ordenable="Si" agrupable="No" ancho ="15"></columna>	
+        </columnas>
+    </reporte>
+    
+    <reporte id="tipoahorrosprestamos" modelo="TipoAhorroPrestamo_model">
+        <columnas>
+            <columna contenido="@cCodigo" etiqueta="tipoahorrosprestamos_codigo" ordenable="Si" agrupable="No"  ancho ="15"></columna>
+            <columna contenido="@cNombre" etiqueta="tipoahorrosprestamos_nombre" ordenable="Si" agrupable="No" ancho ="15"></columna>	
+        </columnas>
+    </reporte>
+    
+    <reporte id="catalogofestivos" modelo="CatalogoFestivo_model">
+        <columnas>
+            <columna contenido="@cCodigo" etiqueta="catalogofestivos_codigo" ordenable="Si" agrupable="No"  ancho ="15"></columna>
+            <columna contenido="@cNombre" etiqueta="catalogofestivos_nombre" ordenable="Si" agrupable="No" ancho ="15"></columna>	
+            <columna contenido="@cNombreMes" etiqueta="catalogofestivos_mes" ordenable="Si" agrupable="No"  ancho ="15"></columna>
+            <columna contenido="@iDia" etiqueta="catalogofestivos_dia" ordenable="Si" agrupable="No" ancho ="15"></columna>	
+            <columna contenido="@cNombreAjusteFestivo" etiqueta="catalogofestivos_ajuste_festivo" ordenable="Si" agrupable="No" ancho ="15"></columna>	
+        </columnas>
+    </reporte>
+    
+    <reporte id="ubicaciones" modelo="Ubicacion_model">
+        <columnas>
+            <columna contenido="@cCodigo" etiqueta="ubicaciones_codigo" ordenable="Si" agrupable="No"  ancho ="15"></columna>
+            <columna contenido="@cNombre" etiqueta="ubicaciones_nombre" ordenable="Si" agrupable="No" ancho ="15"></columna>	
+            <columna contenido="@cNombreAreaGeografica" etiqueta="ubicaciones_area" ordenable="Si" agrupable="No" ancho ="15"></columna>	
+            <columna contenido="@cNombreCiudad" etiqueta="ubicaciones_ciudad" ordenable="Si" agrupable="No" ancho ="15"></columna>	
+        </columnas>
+    </reporte>
+    
+    <reporte id="periodos" modelo="Periodo_model">
+        <columnas>
+            <columna contenido="@iNumero" etiqueta="periodos_numero" ordenable="Si" agrupable="No"  ancho ="15"></columna>
+            <columna contenido="@cNombre" etiqueta="periodos_nombre" ordenable="Si" agrupable="No" ancho ="15"></columna>	
+            <columna contenido="@dtFechaInicial" etiqueta="periodos_fecha_inicial" ordenable="Si" agrupable="No" ancho ="15"></columna>	
+            <columna contenido="@dtFechaFinal" etiqueta="periodos_fecha_final" ordenable="Si" agrupable="No" ancho ="15"></columna>	
+            <columna contenido="@dtFechaPago" etiqueta="periodos_fecha_pago" ordenable="Si" agrupable="No" ancho ="15"></columna>	
+            <columna contenido="@cNombreEstatusPeriodo" etiqueta="periodos_estatus" ordenable="Si" agrupable="No" ancho ="15"></columna>	
+            <columna contenido="@cNombreMes" etiqueta="periodos_mes" ordenable="Si" agrupable="No" ancho ="15"></columna>	
+            <columna contenido="@iDias" etiqueta="periodos_dias" ordenable="Si" agrupable="No" ancho ="15"></columna>	
+            <columna contenido="@cNombreTipoPeriodo" etiqueta="periodos_tipo_periodo" ordenable="Si" agrupable="No" ancho ="15"></columna>	
+        </columnas>
+    </reporte>
+    
+    <reporte id="ahorrosprestamos" modelo="AhorroPrestamo_model">
+        <columnas>
+            <columna contenido="@cNombreTipoAhorroPrestamo" etiqueta="ahorrosprestamos_tipo" ordenable="Si" agrupable="No"  ancho ="15"></columna>
+            <columna contenido="@dtFechaPrestamo" etiqueta="ahorrosprestamos_inicial" ordenable="Si" agrupable="No" ancho ="15"></columna>	
+            <columna contenido="@cReferencia" etiqueta="ahorrosprestamos_referencia" ordenable="Si" agrupable="No" ancho ="15"></columna>	
+            <columna contenido="@fMontoPrestamo" etiqueta="ahorrosprestamos_descontar" ordenable="Si" agrupable="No" ancho ="15"></columna>	
+            <columna contenido="@cBeneficiario" etiqueta="ahorrosprestamos_beneficiario" ordenable="Si" agrupable="No" ancho ="15"></columna>	
+            <columna contenido="@fCargos" etiqueta="ahorrosprestamos_cargos" ordenable="Si" agrupable="No" ancho ="15"></columna>	
+            <columna contenido="@fAbonos" etiqueta="ahorrosprestamos_abonos" ordenable="Si" agrupable="No" ancho ="15"></columna>	
+            <columna contenido="@fSaldo" etiqueta="ahorrosprestamos_saldo" ordenable="Si" agrupable="No" ancho ="15"></columna>	
+            <columna contenido="@cNombreEstatusDescuento" etiqueta="ahorrosprestamos_estatus" ordenable="Si" agrupable="No" ancho ="15"></columna>	
+        </columnas>
+    </reporte>
+    
+    <reporte id="diasajuste" modelo="Excepcion_model">
+        <columnas>
+            <columna contenido="@iNumeroEmpleado" etiqueta="diasajuste_numero" ordenable="Si" agrupable="No"  ancho ="15"></columna>
+            <columna contenido="@cNombreEmpleado" etiqueta="diasajuste_empleado" ordenable="Si" agrupable="No" ancho ="15"></columna>	
+            <columna contenido="@dtFecha" etiqueta="diasajuste_fecha" ordenable="Si" agrupable="No"  ancho ="15"></columna>
+            <columna contenido="@txObservaciones" etiqueta="diasajuste_observaciones" ordenable="Si" agrupable="No" ancho ="15"></columna>	
+        </columnas>
+    </reporte>
+    
+    <reporte id="excepcionesdiashoras" modelo="Excepcion_model">
+        <columnas>
+            <columna contenido="@dtFechaInicio" etiqueta="permisos_fecha_inicial" ordenable="Si" agrupable="No"  ancho ="15"></columna>
+            <columna contenido="@iDias" etiqueta="permisos_fecha_inicial" ordenable="Si" agrupable="No" ancho ="15"></columna>	
+            <columna contenido="@dtFechaFinal" etiqueta="permisos_fecha_final" ordenable="Si" agrupable="No"  ancho ="15"></columna>
+            <columna contenido="@cNombreTipoPermiso" etiqueta="permisos_tipo_permiso" ordenable="Si" agrupable="No" ancho ="15"></columna>	
+            <columna contenido="@txObservaciones" etiqueta="permisos_observaciones" ordenable="Si" agrupable="No" ancho ="15"></columna>	
+        </columnas>
+    </reporte>
+    
+    <reporte id="excepcionesmontos" modelo="Excepcion_model">
+        <columnas>
+            <columna contenido="@iNumeroEmpleado" etiqueta="excepcionesmontos_numero" ordenable="Si" agrupable="No"  ancho ="15"></columna>
+            <columna contenido="@cNombreEmpleado" etiqueta="excepcionesmontos_empleado" ordenable="Si" agrupable="No" ancho ="15"></columna>	
+            <columna contenido="@iNumeroConcepto" etiqueta="excepcionesmontos_numero_concepto" ordenable="Si" agrupable="No"  ancho ="15"></columna>
+            <columna contenido="@cNombreConcepto" etiqueta="excepcionesmontos_concepto" ordenable="Si" agrupable="No" ancho ="15"></columna>	
+            <columna contenido="@fMonto" etiqueta="excepcionesmontos_monto" ordenable="Si" agrupable="No" ancho ="15"></columna>	
+            <columna contenido="@txObservaciones" etiqueta="excepcionesmontos_observaciones" ordenable="Si" agrupable="No" ancho ="15"></columna>	
+        </columnas>
+    </reporte>
+    
+    <reporte id="permisos" modelo="Permiso_model">
+        <columnas>
+            <columna contenido="@iNumeroEmpleado" etiqueta="excepcionesmontos_numero" ordenable="Si" agrupable="No"  ancho ="15"></columna>
+            <columna contenido="@cNombreEmpleado" etiqueta="excepcionesmontos_empleado" ordenable="Si" agrupable="No" ancho ="15"></columna>	
+            <columna contenido="@iNumeroConcepto" etiqueta="excepcionesmontos_numero_concepto" ordenable="Si" agrupable="No"  ancho ="15"></columna>
+            <columna contenido="@cNombreConcepto" etiqueta="excepcionesmontos_concepto" ordenable="Si" agrupable="No" ancho ="15"></columna>	
+            <columna contenido="@fMonto" etiqueta="excepcionesmontos_monto" ordenable="Si" agrupable="No" ancho ="15"></columna>	
+            <columna contenido="@txObservaciones" etiqueta="excepcionesmontos_observaciones" ordenable="Si" agrupable="No" ancho ="15"></columna>	
+        </columnas>
+    </reporte>
+    
+    <reporte id="faltasextras" modelo="FaltaExtra_model">
+        <columnas>
+            <columna contenido="@iNumeroEmpleado" etiqueta="faltasextras_numero" ordenable="Si" agrupable="No"  ancho ="15"></columna>
+            <columna contenido="@cNombreEmpleado" etiqueta="faltasextras_empleado" ordenable="Si" agrupable="No" ancho ="15"></columna>	
+            <columna contenido="@dtFechaInicial" etiqueta="faltasextras_fecha" ordenable="Si" agrupable="No"  ancho ="15"></columna>
+            <columna contenido="@cNombreTipoFaltaExtra" etiqueta="faltasextras_tipo" ordenable="Si" agrupable="No" ancho ="15"></columna>	
+            <columna contenido="@iDias" etiqueta="faltasextras_dias_horas" ordenable="Si" agrupable="No" ancho ="15"></columna>	
+            <columna contenido="@cNombreMotivoFaltaExtra" etiqueta="faltasextras_motivo" ordenable="Si" agrupable="No" ancho ="15"></columna>	
+        </columnas>
+    </reporte>
+    
+    <reporte id="incapacidades" modelo="Incapacidad_model">
+        <columnas>
+            <columna contenido="@dtFechaInicial" etiqueta="incapacidades_fecha_inicial" ordenable="Si" agrupable="No"  ancho ="15"></columna>
+            <columna contenido="@iDias" etiqueta="incapacidades_dias" ordenable="Si" agrupable="No" ancho ="15"></columna>	
+            <columna contenido="@dtFechaFinal" etiqueta="incapacidades_fecha_final" ordenable="Si" agrupable="No"  ancho ="15"></columna>
+            <columna contenido="@cNumero" etiqueta="incapacidades_numero" ordenable="Si" agrupable="No" ancho ="15"></columna>	
+            <columna contenido="@cNombreTipoIncapacidad" etiqueta="incapacidades_tipo_incapacidad" ordenable="Si" agrupable="No" ancho ="15"></columna>	
+            <columna contenido="@txObservaciones" etiqueta="incapacidades_observaciones" ordenable="Si" agrupable="No" ancho ="15"></columna>	
+        </columnas>
+    </reporte>
+    
+    <reporte id="creditoinfonavit" modelo="CreditoInfonavit_model">
+        <columnas>
+            <columna contenido="@dtFechaAlta" etiqueta="creditoinfonavit_fecha" ordenable="Si" agrupable="No"  ancho ="15"></columna>
+            <columna contenido="@cNombreMovimientoInfonavit" etiqueta="creditoinfonavit_movimiento" ordenable="Si" agrupable="No" ancho ="15"></columna>	
+            <columna contenido="@cNumeroInfonavit" etiqueta="creditoinfonavit_infonavit_numero" ordenable="Si" agrupable="No"  ancho ="15"></columna>
+            <columna contenido="@cNombreClaseCreditoInfonavit" etiqueta="creditoinfonavit_infonavit_clase_credito" ordenable="Si" agrupable="No"  ancho ="15"></columna>
+            <columna contenido="@fValor" etiqueta="creditoinfonavit_infonavit_valor" ordenable="Si" agrupable="No" ancho ="15"></columna>	
+            <columna contenido="@fDisminucion" etiqueta="creditoinfonavit_infonavit_disminucion" ordenable="Si" agrupable="No" ancho ="15"></columna>	
+            <columna contenido="@cNombreEstatusCreditoInfonavit" etiqueta="creditoinfonavit_estatus" ordenable="Si" agrupable="No" ancho ="15"></columna>	
+        </columnas>
+    </reporte>
+    
+    <reporte id="resumennomina" modelo="NominaListadoEmpleado_model" funcion="getAllEmpleados">
+        <columnas>
+            <columna contenido="@iNumero" etiqueta="resumennomina_numero" ordenable="Si" agrupable="No"  ancho ="15"></columna>
+            <columna contenido="@cNombreCompleto" etiqueta="resumennomina_empleado" ordenable="Si" agrupable="No"  ancho ="15"></columna>
+            <columna contenido="@fTotalesPercepciones" etiqueta="resumennomina_percepciones" ordenable="Si" agrupable="No"  ancho ="15"></columna>
+            <columna contenido="@fTotalesDeducciones" etiqueta="resumennomina_deducciones" ordenable="Si" agrupable="No"  ancho ="15"></columna>
+            <columna contenido="@fTotalesNetoPagar" etiqueta="resumennomina_neto_pagar" ordenable="Si" agrupable="No"  ancho ="15"></columna>
+            <columna contenido="@cNombreEstatus" etiqueta="resumennomina_estatus" ordenable="Si" agrupable="No"  ancho ="15"></columna>
+        </columnas>
+    </reporte>
+    
+    <reporte id="kardex" modelo="Kardex_model">
+        <columnas>
+            <columna contenido="@dtFecha" etiqueta="kardex_fecha" ordenable="Si" agrupable="No"  ancho ="15"></columna>
+            <columna contenido="@cNombreTipoKardex" etiqueta="kardex_tipo" ordenable="Si" agrupable="No"  ancho ="15"></columna>
+            <columna contenido="@cNombreMovimientoKardex" etiqueta="kardex_motivo" ordenable="Si" agrupable="No"  ancho ="15"></columna>
+            <columna contenido="@txDescripcion" etiqueta="kardex_descripcion" ordenable="Si" agrupable="No"  ancho ="15"></columna>
+        </columnas>
+    </reporte>
+    
+    <reporte id="historialnomina" modelo="HistorialNomina_model">
+        <columnas>
+            <columna contenido="@cNombreTipoNomina" etiqueta="historialnomina_nombre_tipo_nomina" ordenable="Si" agrupable="No"  ancho ="15"></columna>
+            <columna contenido="@iNumeroPeriodo" etiqueta="historialnomina_numero_periodo" ordenable="Si" agrupable="No"  ancho ="15"></columna>
+            <columna contenido="@dtFechaPago" etiqueta="historialnomina_fecha_pago" ordenable="Si" agrupable="No"  ancho ="15"></columna>
+            <columna contenido="@fTotalesPercepciones" etiqueta="historialnomina_percepciones" ordenable="Si" agrupable="No"  ancho ="15"></columna>
+            <columna contenido="@fTotalesDeducciones" etiqueta="historialnomina_deducciones" ordenable="Si" agrupable="No"  ancho ="15"></columna>
+            <columna contenido="@fTotalesNetoPagar" etiqueta="historialnomina_neto_pagar" ordenable="Si" agrupable="No"  ancho ="15"></columna>
+            <columna contenido="@cNombreEstatuPeriodo" etiqueta="historialnomina_estatus" ordenable="Si" agrupable="No"  ancho ="15"></columna>
+        </columnas>
+    </reporte>
+    
+    <reporte id="totalesconceptos" modelo="TotalConcepto_model">
+        <columnas>
+            <columna contenido="@iNumero" etiqueta="totalesconceptos_numero_concepto" ordenable="Si" agrupable="No"  ancho ="15"></columna>
+            <columna contenido="@cNombreConcepto" etiqueta="totalesconceptos_nombre_concepto" ordenable="Si" agrupable="No"  ancho ="15"></columna>
+            <columna contenido="@iEmpleados" etiqueta="totalesconceptos_numero_empleados" ordenable="Si" agrupable="No"  ancho ="15"></columna>
+            <columna contenido="@fTotalPercepciones" etiqueta="totalesconceptos_total_percepciones" ordenable="Si" agrupable="No"  ancho ="15"></columna>
+            <columna contenido="@fTotalDeducciones" etiqueta="totalesconceptos_total_deducciones" ordenable="Si" agrupable="No"  ancho ="15"></columna>
+            <columna contenido="@fTotalObligatorio" etiqueta="totalesconceptos_total_obligatorio" ordenable="Si" agrupable="No"  ancho ="15"></columna>
+        </columnas>
+    </reporte>
+    
+    <reporte id="estadocuenta" modelo="EstadoCuenta_model">
+        <columnas>
+            <columna contenido="@dtFecha" etiqueta="estadocuenta_fecha" ordenable="Si" agrupable="No"  ancho ="15"></columna>
+            <columna contenido="@txDescripcion" etiqueta="estadocuenta_descripcion" ordenable="Si" agrupable="No"  ancho ="15"></columna>
+            <columna contenido="@cReferencia" etiqueta="estadocuenta_referencia" ordenable="Si" agrupable="No"  ancho ="15"></columna>
+            <columna contenido="@fCargo" etiqueta="estadocuenta_cargo" ordenable="Si" agrupable="No"  ancho ="15"></columna>
+            <columna contenido="@fAbono" etiqueta="estadocuenta_abono" ordenable="Si" agrupable="No"  ancho ="15"></columna>
+            <columna contenido="@fSaldo" etiqueta="estadocuenta_saldo" ordenable="Si" agrupable="No"  ancho ="15"></columna>            
+        </columnas>
+    </reporte>
+    
+    
+    <reporte id="acumulados" modelo="Acumulado_model">
+        <columnas>
+            <columna contenido="@iNumeroConcepto" etiqueta="acumulados_numero" ordenable="Si" agrupable="No"  ancho ="15"></columna>
+            <columna contenido="@cNombreConcepto" etiqueta="acumulados_nombre" ordenable="Si" agrupable="No"  ancho ="15"></columna>
+            <columna contenido="@fMontoEnero" etiqueta="acumulados_enero" ordenable="Si" agrupable="No"  ancho ="15"></columna>
+            <columna contenido="@fMontoFebrero" etiqueta="acumulados_febrero" ordenable="Si" agrupable="No"  ancho ="15"></columna>
+            <columna contenido="@fMontoMarzo" etiqueta="acumulados_marzo" ordenable="Si" agrupable="No"  ancho ="15"></columna>
+            <columna contenido="@fMontoMayo" etiqueta="acumulados_abril" ordenable="Si" agrupable="No"  ancho ="15"></columna>            
+            <columna contenido="@fMontoJunio" etiqueta="acumulados_mayo" ordenable="Si" agrupable="No"  ancho ="15"></columna>            
+            <columna contenido="@fMontoJulio" etiqueta="acumulados_junio" ordenable="Si" agrupable="No"  ancho ="15"></columna>            
+            <columna contenido="@fMontoAgosto" etiqueta="acumulados_julio" ordenable="Si" agrupable="No"  ancho ="15"></columna>            
+            <columna contenido="@fMontoSeptiembre" etiqueta="acumulados_septiembre" ordenable="Si" agrupable="No"  ancho ="15"></columna>            
+            <columna contenido="@fMontoOctubre" etiqueta="acumulados_octubre" ordenable="Si" agrupable="No"  ancho ="15"></columna>            
+            <columna contenido="@fMontoNoviembre" etiqueta="acumulados_noviembre" ordenable="Si" agrupable="No"  ancho ="15"></columna>            
+            <columna contenido="@fMontoDiciembre" etiqueta="acumulados_diciembre" ordenable="Si" agrupable="No"  ancho ="15"></columna>            
+            <columna contenido="@fMontoTotal" etiqueta="acumulados_total" ordenable="Si" agrupable="No"  ancho ="15"></columna>            
+        </columnas>
+    </reporte>
+    
+    <reporte id="conceptosconfigurables" modelo="ConceptoConfigurable_model">
+        <columnas>
+            <columna contenido="@iNumero" etiqueta="conceptosconfigurables_numero" ordenable="Si" agrupable="No"  ancho ="15"></columna>
+            <columna contenido="@cNombre" etiqueta="conceptosconfigurables_nombre" ordenable="Si" agrupable="No" ancho ="15"></columna>	
+        </columnas>
+    </reporte>
+    
+    <reporte id="conceptoslistado" modelo="ConceptoListado_model">
+        <columnas>
+            <columna contenido="@cNombre" etiqueta="conceptoslistado_nombre" ordenable="Si" agrupable="No" ancho ="15"></columna>	
+        </columnas>
+    </reporte>
+    
+    <reporte id="calculoisr" modelo="CalculoISR_model">
+        <columnas>
+            <columna contenido="@iNumeroEmpleado" etiqueta="calculoisr_numero" ordenable="Si" agrupable="No" ancho ="15"></columna>	
+            <columna contenido="@cNombreEmpleado" etiqueta="calculoisr_empleado" ordenable="Si" agrupable="No" ancho ="15"></columna>	
+            <columna contenido="@fPercepciones" etiqueta="calculoisr_percepciones" ordenable="Si" agrupable="No" ancho ="15"></columna>	
+            <columna contenido="@fExcento" etiqueta="calculoisr_excento" ordenable="Si" agrupable="No" ancho ="15"></columna>	
+            <columna contenido="@fCalculoISR" etiqueta="calculoisr_calculo_isr" ordenable="Si" agrupable="No" ancho ="15"></columna>	
+            <columna contenido="@fRetenido" etiqueta="calculoisr_retenido" ordenable="Si" agrupable="No" ancho ="15"></columna>	
+            <columna contenido="@fFavor" etiqueta="calculoisr_favor" ordenable="Si" agrupable="No" ancho ="15"></columna>	
+            <columna contenido="@fCargo" etiqueta="calculoisr_cargo" ordenable="Si" agrupable="No" ancho ="15"></columna>	
+            <columna contenido="@bCalcular" etiqueta="calculoisr_calcular" ordenable="Si" agrupable="No" ancho ="15"></columna>	
+        </columnas>
+    </reporte>
+</reportes>
